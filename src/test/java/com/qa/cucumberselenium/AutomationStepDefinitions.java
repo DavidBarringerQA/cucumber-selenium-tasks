@@ -37,16 +37,16 @@ public class AutomationStepDefinitions{
 
 	@Given("I go to input alert")
 	public void i_go_to_input_alert() {
-    driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[1]/div[1]/div[1]/ul/li[2]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[1]/div[1]/div[1]/ul/li[2]/a")).click();
 	}
 
-	@When("I click the button")
-	public void i_click_the_button() {
-    driver.findElement(By.xpath("/html/body/button")).click();
-	}
+//	@When("I click the button")
+//	public void i_click_the_button() {
+//	}
 
 	@When("I input {string}")
 	public void i_input(String string) {
+    driver.findElement(By.xpath("/html/body/button")).click();
     Alert alert = driver.switchTo().alert();
 		alert.sendKeys(string);
 		alert.accept();

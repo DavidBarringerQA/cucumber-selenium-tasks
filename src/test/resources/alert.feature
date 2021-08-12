@@ -6,6 +6,5 @@ Feature: Alert input
     And I am on frame 1
   
     Scenario: Input alert
-      When I click the button
-      And I input "TEST NAME"
+      When I input "TEST NAME"
       Then I see "Hello TEST NAME! How are you today?"
